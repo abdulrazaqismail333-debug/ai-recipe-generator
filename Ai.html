@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Recipe Generator</title>
+
+    <link rel="stylesheet" href="Ai.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🍳 AI Recipe Generator</h1>
+      <p class="subtitle">Turn your ingredients into something delicious.</p>
+
+      <section class="input-section">
+        <label for="ingredients">Enter Ingredients:</label>
+
+        <textarea
+          id="ingredients"
+          name="ingredients"
+          placeholder="e.g. Rice, Tomato, Onion"
+          rows="4"
+        ></textarea>
+
+        <button type="button" id="generate-btn">Generate Recipe</button>
+
+        <button type="button" id="healthy-btn" class="healthy">
+          Make It Healthier
+        </button>
+      </section>
+
+      <section class="recipe-box">
+        <h2>🍽️ Suggested Recipe</h2>
+
+        <h3>Ready to cook?</h3>
+
+        <p class="recipe-placeholder">
+          Enter the ingredients you have, then click "Generate Recipe" to
+          discover what you can make!
+        </p>
+
+        <ol></ol>
+      </section>
+
+      <button type="button" id="clear-btn">Clear</button>
+      <button id="copy-btn">📋 Copy Recipe</button>
+    </main>
+
+    <script src="Ai.js"></script>
+  </body>
+</html>

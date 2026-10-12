@@ -1,0 +1,324 @@
+/* Welcome message before a recipe is generated */
+.recipe-placeholder {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 16px;
+  margin-top: 10px;
+  background: #f0fdf4;
+  border: 1px dashed #bbf7d0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 1. Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Style the whole page */
+
+body {
+  background: linear-gradient(135deg, #f0fdf4, #fff7ed);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 32px 20px;
+  color: #222;
+}
+
+/* 3. Main container */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(34, 70, 45, 0.12);
+  border: 1px solid rgba(34, 70, 45, 0.08);
+}
+/* 4. Main heading */
+
+h1 {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #166534;
+  margin-bottom: 12px;
+}
+
+/* 5. Ingredients input section */
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.input-section label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 16px;
+  border: 1px solid #d1e7d6;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fbfefb;
+  color: #222;
+  resize: vertical;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12);
+  background: #ffffff;
+}
+
+/* 6. Buttons */
+
+button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.15);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #15803d;
+  box-shadow: 0 6px 14px rgba(22, 163, 74, 0.2);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 3px;
+}
+
+/* 7. Make It Healthier button */
+
+.healthy {
+  background: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+.healthy:hover {
+  background: #1d4ed8;
+}
+
+/* 8. Recipe display box */
+
+.recipe-box {
+  margin-top: 26px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2eee5;
+  box-shadow: 0 8px 24px rgba(34, 70, 45, 0.05);
+}
+
+.recipe-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #374151;
+}
+
+.recipe-box h3 {
+  margin-bottom: 16px;
+  color: #15803d;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.recipe-box ol {
+  padding-left: 24px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.recipe-box li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+/* Mobile-friendly design */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 92%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6b7280;
+  }
+
+  textarea {
+    min-height: 120px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .recipe-box {
+    padding: 18px;
+    margin-top: 22px;
+  }
+
+  .recipe-box h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#copy-btn {
+  margin: 0;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+#copy-btn:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}
+
+#copy-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px 12px;
+  }
+
+  .container {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .input-section {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .recipe-box {
+    margin-top: 24px;
+    padding: 18px;
+  }
+}
+
+/* Keep the Clear and Copy Recipe buttons neat */
+#clear-btn,
+#copy-btn {
+  width: auto;
+  min-height: 48px;
+  margin: 8px 8px 0 0;
+  padding: 12px 22px;
+  border-radius: 10px;
+}
+
+/* Make buttons fit smaller screens */
+@media (max-width: 480px) {
+  #clear-btn,
+  #copy-btn {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+/* Responsive layout for tablets and small screens */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 5vw, 2.2rem);
+    line-height: 1.25;
+  }
+
+  .recipe-box h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra adjustments for mobile phones */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 18px 14px;
+  }
+
+  .input-section label {
+    font-size: 0.95rem;
+  }
+
+  .recipe-box {
+    padding: 16px;
+  }
+
+  .recipe-box ol {
+    padding-left: 20px;
+    line-height: 1.7;
+  }
+}
